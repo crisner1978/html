@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dado Tea Lunch Menu</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      h1,
+      h3,
+      h4,
+      label,
+      input {
+        margin: 4px;
+      }
+      label {
+        font-weight: bold;
+      }
+      span {
+        color: slategrey;
+        font-weight: 600;
+      }
+      h3 {
+        font-size: 18px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        position: absolute;
+        top: -20px;
+        background-color: white;
+        padding: 4px;
+      }
+      section {
+        position: relative;
+        margin-top: 15px;
+      }
+      .menu {
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 40px;
+        padding-right: 40px;
+        border-left: 4px black solid;
+        border-right: 4px black solid;
+        min-height: 100vh;
+        padding-bottom: 80px;
+      }
+      .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 30px;
+      }
+      .header__info > p {
+        margin-top: 5px;
+      }
+      .divider {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        background-color: slategrey;
+        height: 2px;
+      }
+      .orderinfo {
+        border: 2px solid slategrey;
+        padding: 20px;
+        margin-bottom: 10px;
+      }
+      .orderinfo > div {
+        display: flex;
+        align-items: center;
+      }
+      .orderinfo > input {
+        margin-bottom: 10px;
+        margin-top: 20px;
+        width: 250px;
+      }
+      .sandwiches {
+        border: 2px solid slategrey;
+        padding: 20px;
+        margin-bottom: 10px;
+      }
+      .sandwiches__day > h4 {
+        margin-top: 20px;
+        text-decoration: underline;
+        margin-bottom: 5px;
+      }
+      .snack {
+        border: 2px solid slategrey;
+        padding: 20px;
+        margin-bottom: 10px;
+      }
+      .snack > h4 {
+        margin-top: 20px;
+      }
+      .drink {
+        border: 2px solid slategrey;
+        padding: 20px;
+        margin-bottom: 10px;
+      }
+      .drink__drinks {
+        margin-top: 20px;
+      }
+      .button {
+        padding: 10px;
+        border-radius: 5%;
+        background-color: blue;
+        color: white;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu">
+      <header class="header">
+        <h1>Dado Tea Lunch Special</h1>
+        <div class="header__info">
+          <p>
+            Monday through Friday
+            <span>11AM to 3PM</span>
+            $9.95 plus tax
+          </p>
+
+          <p>Includes sandwich, snack and drink</p>
+        </div>
+      </header>
+      <main>
+        <form action="submit">
+          <section class="orderinfo">
+            <h3>Order Information</h3>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" />
+            <div>
+              <input type="radio" name="here" id="here" value="here" />
+              <label for="here">Here</label>
+            </div>
+            <div>
+              <input type="radio" name="togo" id="togo" value="togo" />
+              <label for="togo">To Go</label>
+            </div>
+          </section>
+
+          <section class="sandwiches">
+            <h3>Sandwiches</h3>
+            <div class="sandwiches__day">
+              <h4>Monday</h4>
+              <div>
+                <input type="radio" name="tomato" id="tomato" value="tomato" />
+                <label for="tomato">Tomato Mozzarella</label>
+              </div>
+              <div>
+                <input type="radio" name="chicken" id="chicken" value="chicken" />
+                <label for="chicken">Chicken Salad</label>
+              </div>
+            </div>
+            <div class="sandwiches__day">
+              <h4>Tuesday</h4>
+              <div>
+                <input type="radio" name="greek" id="greek" value="greek" />
+                <label for="greek">Greek Salad Wrap</label>
+              </div>
+              <div>
+                <input type="radio" name="toto" id="toto" value="toto" />
+                <label for="toto">Toto Wrap</label>
+              </div>
+            </div>
+            <div class="sandwiches__day">
+              <h4>Wednesday</h4>
+              <div>
+                <input type="radio" name="redpepper" id="redpepper" value="redpepper" />
+                <label for="redpepper">Red Pepper Hummus</label>
+              </div>
+              <div>
+                <input type="radio" name="turkey" id="turkey" value="turkey" />
+                <label for="turkey">Roasted Turkey</label>
+              </div>
+            </div>
+            <div class="sandwiches__day">
+              <h4>Thursday</h4>
+              <div>
+                <input type="radio" name="carrot" id="carrot" value="carrot" />
+                <label for="carrot">Carrot-Ginger Hummus Wrap</label>
+              </div>
+              <div>
+                <input type="radio" name="egg" id="egg" value="egg" />
+                <label for="egg">Egg Salad</label>
+              </div>
+            </div>
+            <div class="sandwiches__day">
+              <h4>Friday</h4>
+              <div>
+                <input type="radio" name="dado" id="dado" value="dado" />
+                <label for="dado">Dado Wrap</label>
+              </div>
+              <div>
+                <input type="radio" name="tuna" id="tuna" value="tuna" />
+                <label for="tuna">Tuna Salad</label>
+              </div>
+            </div>
+            <hr class="divider" />
+            <div>
+              <input type="radio" name="glutenfree" id="glutenfree" value="glutenfree" />
+              <label for="glutenfree">Gluten Free Breach (75¢ extra)</label>
+            </div>
+          </section>
+
+          <section class="snack">
+            <h3>Snack</h3>
+            <h4 for="snacks">Snacks</h4>
+            <div>
+              <input type="radio" name="apple" id="apple" value="apple" /> <label for="apple">Apple</label>
+              <input type="radio" name="banana" id="banana" value="banana" /> <label for="banana">Banana</label>
+              <input type="radio" name="potato" id="potato" value="potato" /> <label for="potota">Potato Chips</label>
+            </div>
+          </section>
+
+          <section class="drink">
+            <h3>Drink</h3>
+            <div class="drink__drinks">
+              <label for="drinks">Drinks</label>
+              <select  name="drinks" id="drinks">
+                <option value="">--SELECT YOUR DRINK--</option>
+                <optgroup label="Black Tea">
+                  <option value="Keemun">Hot Black Tea - Keemun</option>
+                  <option value="Decaf Keemun">Hot Black Tea - Decaf Keemun</option>
+                  <option value="Keemun">Iced Black Tea - Keemun</option>
+                  <option value="Decaf Keemun">Iced Black Tea - Keemun</option>
+                </optgroup>
+
+                <optgroup label="Green Tea">
+                  <option value="Hot Green Tea">Hot Green Tea - Sencha</option>
+                  <option value="Hot Green Tea">Hot Green Tea - Decaf</option>
+                  <option value="Iced Green Tea">Iced Green Tea - Sencha</option>
+                  <option value="Iced Green Tea">Iced Green Tea - Decaf</option>
+                </optgroup>
+
+                <optgroup label="Coffee">
+                  <option value="Hot Coffee">Hot Coffee</option>
+                  <option value="Hot Decaf Coffee">Hot Decaf Coffee</option>
+                  <option value="Iced Coffee">Iced Coffee</option>
+                  <option value="Iced Decaf Coffee">Iced Decaf Coffee</option>
+                </optgroup>
+
+                <optgroup label="Bubble Tea ($1.50 extra)">
+                  <option value="Bubble Tea">Bubble Tea</option>
+                </optgroup>
+              </select>
+            </div>
+
+            <hr class="divider" />
+            <input type="checkbox" name="large" id="large" value="large" />
+            <label for="large">Large drink (75¢ extra)</label>
+          </section>
+
+          <input class="button" type="button" value="Place Order" />
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
